@@ -11,17 +11,17 @@ afterEach(cleanup)
 describe('Gallery is rendering', () => {
 
 
-    it('renders', () => {
-        render(<Gallery currentCategory={portrait} />);
-    });
+  it('renders', () => {
+    render(<Gallery currentCategory={portrait} />);
+  });
 
-    it('renders', () => {
-        const { asFragment } = render(<Gallery currentCategory={portrait} />)
-        expect(asFragment()).toMatchSnapshot()
-    })
+  it('renders', () => {
+    const { asFragment } = render(<Gallery currentCategory={portrait} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 });
 
 it('renders', () => {
-    const { getByTestId } = render(<Gallery currentCategory={portrait} />)
-    expect(getByTestId('h1tag')).toHaveTextContent('Portraits')
+  const { getByTestId } = render(<Gallery currentCategory={portrait} />)
+  expect(getByTestId('h1tag')).toHaveTextContent('Portraits')
 })
